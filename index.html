@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <title>Art GALLERY</title>
+<style>
+*{
+    box-sizing: border-box;
+}  
+body{
+    margin: 0;
+    font-family: Arial;
+    background-color: rgba(214, 226, 156, 0.373);
+}
+.header {
+text-align: center;
+padding: 40px;
+}    
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+img{
+    opacity: 0.5;
+}
+img:hover{
+    opacity:1.0
+}
+/*Create four equal columns that sit next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+/* Responsive layout - makes a two column-layout instead of four columns*/
+@media (max-width:800px){
+    .column{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media(max-width: 600px) {
+    .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height:3px;
+    background-color: crimson;
+    bottom: -10px;
+    left:50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+</style>
+<body>
+
+<!--Header-->
+<div class="header">
+    <h1>MY ART GALLERY</h1>
+</div>
+
+<!--Photo Grid-->
+<div class="row">
+    <div class="column">
+        <img src="./IMAGES/digiart1.png" style="width:100%">
+        <img src="./IMAGES/digiart2.png" style="width:100%">
+        <img src="./IMAGES/digiart3.png" style="width:100%">
+        <img src="./IMAGES/digiart4.png" style="width:100%">
+        <img src="./IMAGES/digiart5.png" style="width:100%">
+        <img src="./IMAGES/leafart1.jpg" style="width:100%">
+        <img src="./IMAGES/leafart2.jpg" style="width:100%">
+        <img src="./IMAGES/leafart3.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+        <img src="./IMAGES/dryart1.jpg" style="width:100%">
+        <img src="./IMAGES/dryart2.jpg" style="width:100%">
+        <img src="./IMAGES/dryart3.jpg" style="width:100%">
+        <img src="./IMAGES/dryart4.jpg" style="width:100%">
+        <img src="./IMAGES/paint1.jpg" style="width:100%">
+        <img src="./IMAGES/paint2.jpg" style="width:100%">
+        <img src="./IMAGES/paint3.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+        <img src="./IMAGES/paint4.jpg" style="width:100%">
+        <img src="./IMAGES/paint5.jpg" style="width:100%">
+        <img src="./IMAGES/paint6.jpg" style="width:100%">
+        <img src="./IMAGES/paint7.jpg" style="width:100%">
+        <img src="./IMAGES/paint8.jpg" style="width:100%">
+        <img src="./IMAGES/paint9.jpg" style="width:100%">
+        <img src="./IMAGES/pastel1.jpg" style="width:100%">
+        <img src="./IMAGES/pastel2.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+        <img src="./IMAGES/penart1.jpg" style="width:100%">
+        <img src="./IMAGES/penart2.jpg" style="width:100%">
+        <img src="./IMAGES/penart3.jpg" style="width:100%">
+        <img src="./IMAGES/penart4.jpg" style="width:100%">
+        <img src="./IMAGES/zent1.jpg" style="width:100%">
+        <img src="./IMAGES/zent2.jpg" style="width:100%">
+    </div>
+</div>
+</body>
+</html>
